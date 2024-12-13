@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  namespace: team13
+  name: team13-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: default  # or the name of the service account being used by your pods
+    namespace: team13
+roleRef:
+  kind: Role
+  name: team13-role
+  apiGroup: rbac.authorization.k8s.io
