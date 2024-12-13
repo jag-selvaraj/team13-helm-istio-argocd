@@ -1,0 +1,33 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - {{ .Values.istioGateway }}
+  http:
+  - match:
+    - headers:
+        user-agent:
+          regex: ".*Chrome.*"
+    rewrite:
+      uri: "/index-chrome.html"
+    route:
+    - destination:
+        host: {{ .Release.Name }}.{{ .Release.Namespace }}.svc.cluster.local
+        port:
+          number: 80
+  - match:
+    - headers:
+        user-agent:
+          regex: ".*Firefox.*"
+    rewrite:
+      uri: "/index-firefox.html"
+    route:
+    - destination:
+        host: {{ .Release.Name }}.{{ .Release.Namespace }}.svc.cluster.local
+        port:
+          number: 80
