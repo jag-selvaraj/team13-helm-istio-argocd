@@ -5,5 +5,5 @@ image:
   pullPolicy: IfNotPresent
 service:
   type: LoadBalancer
-  port: 80
+  port: 8081
 istioGateway: team13-gateway
