@@ -4,6 +4,6 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 istioGateway: team13-gateway
