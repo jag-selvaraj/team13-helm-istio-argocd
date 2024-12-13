@@ -1,18 +1,20 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
+  labels:
+    app.kubernetes.io/instance: team13app
   name: team13app
   namespace: team13
 spec:
-  hosts:
-    - "*"
   gateways:
     - team13-gateway
+  hosts:
+    - '*'
   http:
     - match:
         - headers:
             user-agent:
-              regex: ".*Chrome.*"
+              regex: .*Chrome.*
       rewrite:
         uri: /index-chrome.html
       route:
@@ -23,7 +25,7 @@ spec:
     - match:
         - headers:
             user-agent:
-              regex: ".*Firefox.*"
+              regex: .*Firefox.*
       rewrite:
         uri: /index-firefox.html
       route:
