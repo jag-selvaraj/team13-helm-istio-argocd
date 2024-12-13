@@ -6,6 +6,6 @@ metadata:
 spec:
   ports:
   - port: {{ .Values.service.port }}
-    targetPort: 8081
+    targetPort: 80
   selector:
     app: {{ .Release.Name }}
