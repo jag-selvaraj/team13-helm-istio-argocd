@@ -5,14 +5,72 @@ metadata:
   namespace: {{ .Release.Namespace }}
 data:
   index-chrome.html: |
-    <!DOCTYPE html>
+     <!DOCTYPE html>
     <html lang="en">
-    <head>...</head>
-    <body style="background-color: green;">...</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Static Webpage</title>
+        <style>
+            body {
+                background-color: red;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: white;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to DecSecOps Hackathon - TEAM13 - Week 3</h1>
+        <h1>Team member names</h1>
+        <p>Jagadesh Selvaraj</p>
+        <p>Arun Subramaniyan</p>
+        <p>Zubair Ahmed Khan</p>
+        <p>Uma Lekshmanan</p>
+    </body>
     </html>
   index-firefox.html: |
-    <!DOCTYPE html>
+     <!DOCTYPE html>
     <html lang="en">
-    <head>...</head>
-    <body style="background-color: blue;">...</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Static Webpage</title>
+        <style>
+            body {
+                background-color: blue;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: white;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to DecSecOps Hackathon - TEAM13 - Week 3</h1>
+        <h1>Team member names</h1>
+        <p>Jagadesh Selvaraj</p>
+        <p>Arun Subramaniyan</p>
+        <p>Zubair Ahmed Khan</p>
+        <p>Uma Lekshmanan</p>
+    </body>
     </html>
