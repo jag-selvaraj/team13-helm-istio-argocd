@@ -1,0 +1,5 @@
+apiVersion: v2
+name: team13-webpage
+description: A Helm chart for deploying a static webpage with Istio
+version: 0.1.0
+appVersion: 1.0.0
